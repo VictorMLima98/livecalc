@@ -10,7 +10,7 @@
             </div>
             <div class="grid items-center content-center w-full grid-cols-4 grid-rows-5 gap-4 p-6 text-4xl text-center">
                 <x-button wire:click="clear" text="C" class="text-black bg-apple-dark-gray" />
-                <x-button text="±" class="text-black bg-apple-dark-gray" />
+                <x-button text="±" wire:click="invert" class="text-black bg-apple-dark-gray" />
                 <x-button text="%" class="text-black bg-apple-dark-gray" />
                 <x-button wire:click="operation('/')" text="÷" class="text-white bg-apple-orange !text-2xl" />
                 <x-digit number="7" />

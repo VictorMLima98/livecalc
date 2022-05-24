@@ -8,6 +8,8 @@ class Calculator extends Component
 {
     public bool $operation = false;
 
+    public bool $invert = false;
+
     public float $total = 0.00;
 
     public string $sentence = '';
@@ -22,6 +24,7 @@ class Calculator extends Component
             return;
         }
         $this->operation = false;
+        $this->invert = false;
         $this->sentence .= $digit;
     }
 
@@ -40,6 +43,10 @@ class Calculator extends Component
 
     public function operation(string $operator) : void
     {
+        if ($this->sentence === '') {
+            return;
+        }
+
         if ($this->operation) {
             return;
         }
@@ -48,8 +55,21 @@ class Calculator extends Component
         $this->operation = true;
     }
 
+    public function invert() : void
+    {
+        if ($this->invert) {
+            return;
+        }
+
+        $this->sentence .= "- ";
+        $this->invert = true;
+    }
+
     public function calculate() : void
     {
+        if ($this->sentence === '') {
+            return;
+        }
         $this->total = (float) math_eval($this->sentence);
         $this->sentence = (string) $this->total;
     }
