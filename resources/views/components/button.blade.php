@@ -3,8 +3,7 @@
 ])
 
 @php
-    $class = "p-8 transition duration-150 ease-out hover:ease-in cursor-pointer hover:text-gray-500";
-
+    $class = "w-full p-6 m-2 text-white transition duration-150 ease-out rounded-full cursor-pointer place-self-center hover:ease-in bg-apple-black";
     $text = $text ?? '';
 @endphp
 

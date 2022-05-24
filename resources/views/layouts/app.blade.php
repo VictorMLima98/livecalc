@@ -10,7 +10,7 @@
 
     @livewireStyles()
 </head>
-<body class="bg-slate-900">
+<body class="bg-apple-black">
 
     <livewire:calculator />
 

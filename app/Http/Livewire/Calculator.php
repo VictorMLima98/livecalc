@@ -51,7 +51,7 @@ class Calculator extends Component
     public function calculate() : void
     {
         $this->total = (float) math_eval($this->sentence);
-        $this->sentence = '';
+        $this->sentence = (string) $this->total;
     }
 
     public function render()
